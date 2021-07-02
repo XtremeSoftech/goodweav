@@ -1,0 +1,82 @@
+.form-design {
+  /* padding: 10px; */
+}
+.form-design .row {
+  padding: 10px;
+}
+
+.nav-link {
+  border-bottom: tomato;
+}
+#index-style{
+    background-color: #d4d4d4;
+}
+
+#home {
+  padding: 25px;
+}
+
+#home .card {
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: white;
+  border-color: transparent;
+}
+
+#home .card .icon{
+    color: #d4d4d4;
+    width: 50px;
+}
+
+#home .card img{
+    margin-left: -10px;
+    width: 60px;
+    
+}
+
+#home .card h2{
+    color: #004783;
+}
+
+#home .card span{
+    color: #004783;
+}
+
+#home #alt-card {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: rgb(174, 179, 255);
+  border-color: transparent;
+}
+
+#home #alt-card h2{
+    color: #004783;
+}
+
+#home #alt-card h4 {
+    color: #004783;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#home #alt-card span {
+  font-size: 12px;
+}
+
+#home #alt-card .card {
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-color: transparent;
+}
+
+#add-form .row input{
+    border-color: #004783;
+    border-radius: 0%;
+    /* border-style: solid 2px; */
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+}
