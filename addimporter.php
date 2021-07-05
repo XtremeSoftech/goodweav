@@ -2,7 +2,7 @@
     //connection File
     include('./php-include/conn.php');
 
-    //Exporter Logic
+    //Importer Logic
     include('./php-include/implementation.php');
 ?>
 
@@ -21,42 +21,42 @@
             <div class="form-design">
                 <div  id="add-form" class="card">
                     <div class="card-header primary text-center">
-                        <h3>Add NEW Exporter</h3>
+                        <h3>Add NEW Importer</h3>
                     </div>
 
                     <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                             <div class="mb-1 row">
-                                <label for="expCode" class="col-sm-2 col-form-label">Exporter Code</label>
+                                <label for="expCode" class="col-sm-2 col-form-label">Importer Code</label>
                                 <div class="col-sm-3">
-                                    <input type="text" name="exporter_code" class="form-control" id="expCode" placeholder="Enter Exporter Code">
+                                    <input type="text" name="importer_code" class="form-control" id="expCode" placeholder="Enter Importer Code">
                                 </div>
-                                <label for="expRegDate" class="col-sm-3 col-form-label">Exporter Registered Date</label>
+                                <label for="expRegDate" class="col-sm-3 col-form-label">Importer Registered Date</label>
                                 <div class="col-sm-4">
                                     <input type="date" name="registered_date" class="form-control" id="expRegDate" placeholder="Enter Registered Date">
                                 </div>
                             </div>
                             <div class="mb-1 row">
-                                <label for="expName" class="col-sm-2 col-form-label">Exporter Name</label>
+                                <label for="expName" class="col-sm-2 col-form-label">Importer Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="exporter_name" class="form-control" id="expName" placeholder="Enter Exporter Registered Name">
+                                    <input type="text" name="importer_name" class="form-control" id="expName" placeholder="Enter Importer Registered Name">
                                 </div>
                             </div>
                             <div class="mb-1 row">
-                                <label for="expAddress" class="col-sm-2 col-form-label">Exporter Address</label>
+                                <label for="expAddress" class="col-sm-2 col-form-label">Importer Address</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="exporter_add" class="form-control" id="expAddress" placeholder="Enter Exporter Registered Address">
+                                    <input type="text" name="importer_add" class="form-control" id="expAddress" placeholder="Enter Importer Registered Address">
                                 </div>
                             </div>
                             <div class="mb-1 row">
-                                <label for="expAddress" class="col-sm-2 col-form-label">Exporter Country</label>
+                                <label for="expAddress" class="col-sm-2 col-form-label">Importer Country</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="exporter_country" class="form-control" id="expAddress" placeholder="Enter Exporter Country">
+                                    <input type="text" name="importer_country" class="form-control" id="expAddress" placeholder="Enter Importer Country">
                                 </div>
                             </div>
                             <div class="mb-1 row">
-                                <label for="expAddress" class="col-sm-2 col-form-label">Exporter Website</label>
+                                <label for="expAddress" class="col-sm-2 col-form-label">Importer Website</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="exporter_website" class="form-control" id="expAddress" placeholder="eg. https://example.com/">
+                                    <input type="text" name="importer_website" class="form-control" id="expAddress" placeholder="eg. https://example.com/">
                                 </div>
                             </div>
                             <div class="mb-1 row">
@@ -66,12 +66,18 @@
                                 </div>
                             </div>
                             <div class="mb-1 row">
-                            <label for="expRegDate" class="col-sm-3 col-form-label">Exporter Delicensed Date</label>
+                            <label for="expRegDate" class="col-sm-3 col-form-label">Importer Delicensed Date</label>
                                 <div class="col-sm-4">
-                                    <input type="date" name="exporter_delicensed_date" class="form-control" id="expRegDate" placeholder="Enter Delicensed Date">
+                                    <input type="date" name="importer_delicensed_date" class="form-control" id="expRegDate" placeholder="Enter Delicensed Date">
                                 </div>
                             </div>
-                            <input type="submit" name="exporter" Value="Submit">
+                            <div class="mb-1 row">
+                            <label for="expRegDate" class="col-sm-3 col-form-label">Importer Re-Registration Date</label>
+                                <div class="col-sm-4">
+                                    <input type="date" name="importer_re-registration_date" class="form-control" id="expRegDate" placeholder="Enter Delicensed Date">
+                                </div>
+                            </div>
+                            <input type="submit" name="importer" Value="Submit">
                     </form>
 
 
