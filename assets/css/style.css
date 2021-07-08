@@ -1,6 +1,4 @@
-.form-design {
-  /* padding: 10px; */
-}
+
 .form-design .row {
   padding: 10px;
 }
@@ -23,6 +21,9 @@
   background-color: white;
   border-color: transparent;
 }
+
+
+
 
 #home .card .icon{
     color: #d4d4d4;
@@ -69,6 +70,12 @@
   text-align: center;
   padding: 20px;
   background-color: white;
+  border-color: transparent;
+}
+
+#home #alt-card :hover {
+
+  background-color: rgb(173, 28, 28);
   border-color: transparent;
 }
 
