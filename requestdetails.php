@@ -14,100 +14,101 @@
                 <h4>Exporter Code: <span> 123456</span></h4>
 
                 <hr>
+                <div class="table-responsive">
+                    <table id="table_id" class="table table-striped table-bordered nowrap">
+                        <thead>
+                            <tr>
+                                <th>Sl No.</th>
+                                <th>Purchase Order No.</th>
+                                <th>DCPI No</th>
+                                <th>Sub-Contractor/Factory</th>
+                                <th>Item</th>
+                                <th>Product Type</th>
+                                <th>Design & Quality</th>
+                                <th>Label Type</th>
+                                <th>No. of Rolls</th>
+                                <th>No. of Pieces</th>
+                                <th>Width</th>
+                                <th>Length</th>
+                                <th>Total Area <span>inch/cm</span></th>
+                                <th>No. of Rolls</th>
+                                <th>No. of Pieces</th>
+                            </tr>
+                        </thead>
 
-                <table id="table_id" class="table table-striped table-bordered table-responsive">
-                    <thead>
-                        <tr>
-                            <th>Sl No.</th>
-                            <th>Purchase Order No.</th>
-                            <th>DCPI No</th>
-                            <th>Sub-Contractor/Factory</th>
-                            <th>Item</th>
-                            <th>Product Type</th>
-                            <th>Design & Quality</th>
-                            <th>Label Type</th>
-                            <th>No. of Rolls</th>
-                            <th>No. of Pieces</th>
-                            <th>Width</th>
-                            <th>Length</th>
-                            <th>Total Area <span>inch/cm</span></th>
-                            <th>No. of Rolls</th>
-                            <th>No. of Pieces</th>
-                        </tr>
-                    </thead>
+                        <tbody>
 
-                    <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>3693168</td>
+                                <td>066-04-7648</td>
+                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>Rug</td>
+                                <td>FLAT WEAVE</td>
+                                <td>EPT0011785</td>
+                                <td><select name="labelType" id="labelType">
+                                        <option value="1">Test</option>
+                                        <option value="2">Test 2</option>
+                                    </select></td>
+                                <td>rolls</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
 
-                        <tr>
-                            <td>1</td>
-                            <td>3693168</td>
-                            <td>066-04-7648</td>
-                            <td>Obeetee Pvt Ltd (Unit-2) </td>
-                            <td>Rug</td>
-                            <td>FLAT WEAVE</td>
-                            <td>EPT0011785</td>
-                            <td><select name="labelType" id="labelType">
-                                    <option value="1">Test</option>
-                                    <option value="2">Test 2</option>
-                                </select></td>
-                            <td>rolls</td>
-                            <td>600</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>600</td>
-                            <td>10</td>
-                            <td>20</td>
+                            </tr>
 
-                        </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>36321118</td>
+                                <td>066-04-7648</td>
+                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>Rug</td>
+                                <td>FLAT WEAVE</td>
+                                <td>EPT0011785</td>
+                                <td><select name="labelType" id="labelType">
+                                        <option value="1">Test</option>
+                                        <option value="2">Test 2</option>
+                                    </select></td>
+                                <td>rolls</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
 
-                        <tr>
-                            <td>2</td>
-                            <td>36321118</td>
-                            <td>066-04-7648</td>
-                            <td>Obeetee Pvt Ltd (Unit-2) </td>
-                            <td>Rug</td>
-                            <td>FLAT WEAVE</td>
-                            <td>EPT0011785</td>
-                            <td><select name="labelType" id="labelType">
-                                    <option value="1">Test</option>
-                                    <option value="2">Test 2</option>
-                                </select></td>
-                            <td>rolls</td>
-                            <td>600</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>600</td>
-                            <td>10</td>
-                            <td>20</td>
+                            </tr>
 
-                        </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>369342</td>
+                                <td>066-04-7648</td>
+                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>Rug</td>
+                                <td>FLAT WEAVE</td>
+                                <td>EPT0011785</td>
+                                <td><select name="labelType" id="labelType">
+                                        <option value="1">Test</option>
+                                        <option value="2">Test 2</option>
+                                    </select></td>
+                                <td>rolls</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
 
-                        <tr>
-                            <td>3</td>
-                            <td>369342</td>
-                            <td>066-04-7648</td>
-                            <td>Obeetee Pvt Ltd (Unit-2) </td>
-                            <td>Rug</td>
-                            <td>FLAT WEAVE</td>
-                            <td>EPT0011785</td>
-                            <td><select name="labelType" id="labelType">
-                                    <option value="1">Test</option>
-                                    <option value="2">Test 2</option>
-                                </select></td>
-                            <td>rolls</td>
-                            <td>600</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>600</td>
-                            <td>10</td>
-                            <td>20</td>
-
-                        </tr>
+                            </tr>
 
 
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>

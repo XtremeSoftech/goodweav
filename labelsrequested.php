@@ -10,54 +10,58 @@
     <section>
         <div class="container mt-5">
             <div class="card shadow p-2">
-        <table id="table_id" class="table table-striped table-bordered wrap" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Sl No.</th>
-                    <th>Exporter Code</th>
-                    <th>Exporter Name</th>
-                    <th>Labels Requested</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td><a href="requestdetails.php">Digital Tech Services Pvt Ltd</a></td>
-                    <td>12</td>
-                </tr>
+                <div class="table-responsive">
+                    <table id="table_id" class="table table-striped table-bordered wrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Sl No.</th>
+                                <th>Exporter Code</th>
+                                <th>Exporter Name</th>
+                                <th>Labels Requested</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtreme Digital Tech Services Pvt Ltd</td>
-                    <td>12</td>
-                </tr>
-                
+                            <tr>
+                                <td>1</td>
+                                <td>1234567</td>
+                                <td><a href="requestdetails.php">Digital Tech Services Pvt Ltd</a></td>
+                                <td>12</td>
+                            </tr>
 
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtreme Digital Tech Services Pvt Ltd</td>
-                    <td>10</td>
-                </tr><tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtreme Digital Tech Services Pvt Ltd</td>
-                    <td>2</td>
-                </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1234567</td>
+                                <td>Xtreme Digital Tech Services Pvt Ltd</td>
+                                <td>12</td>
+                            </tr>
 
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtree Digital Tech Services Pvt Ltd</td>
-                    <td>134</td>
-                </tr>
-            
-            </tbody>
-        </table>
-        </div>
+
+                            <tr>
+                                <td>1</td>
+                                <td>1234567</td>
+                                <td>Xtreme Digital Tech Services Pvt Ltd</td>
+                                <td>10</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>1234567</td>
+                                <td>Xtreme Digital Tech Services Pvt Ltd</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>1234567</td>
+                                <td>Xtree Digital Tech Services Pvt Ltd</td>
+                                <td>134</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
 
