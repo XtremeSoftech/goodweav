@@ -1,3 +1,7 @@
+<?php
+    include('./php-include/conn.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,40 +24,25 @@
                 </tr>
             </thead>
             <tbody>
-                
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td><a href="requestdetails.php">Digital Tech Services Pvt Ltd</a></td>
-                    <td>12</td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtreme Digital Tech Services Pvt Ltd</td>
-                    <td>12</td>
-                </tr>
-                
-
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtreme Digital Tech Services Pvt Ltd</td>
-                    <td>10</td>
-                </tr><tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtreme Digital Tech Services Pvt Ltd</td>
-                    <td>2</td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>1234567</td>
-                    <td>Xtree Digital Tech Services Pvt Ltd</td>
-                    <td>134</td>
-                </tr>
+                <?php
+                    $id=1;
+                    $t = mysqli_query($db, "select e.exporter_code, exporter_name from expoter e join exporter_sub_info eb on e.exporter_code=eb.exporter_code WHERE e.flg='N'");
+                    while($r = mysqli_fetch_assoc($t)){
+                ?>
+                    <?php
+                        $ep_c = $r['exporter_code'];
+                        $p = mysqli_query($db, "select COUNT(*) as count from requested_label where exporter_code='$ep_c';");
+                        while($plo = mysqli_fetch_assoc($p)){
+                    ?>
+                    <tr>
+                        <td><?php echo $id++; ?></td>
+                        <td><?php echo $r['exporter_code']; ?></td>
+                        <td><a href="requestdetails.php?id=<?php echo $ep_c; ?>"><?php echo $r['exporter_name']; ?></a></td>
+                        <td><?php echo $plo['count']; ?></td>
+                    </tr>
+                <?php }
+                }
+                ?>
             
             </tbody>
         </table>

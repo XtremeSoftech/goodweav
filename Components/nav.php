@@ -8,7 +8,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <!-- <a class="nav-link" href="#">Features</a> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" href="labelsrequested.php">Requested LABELS</a>
@@ -19,7 +19,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="addexporter.php">Add New Exporter</a></li>
-            <li><a class="dropdown-item" href="addimporter.php">Add New Importer</a></li>
+            <li><a class="dropdown-item" href="#">Add New Importer</a></li>
             <!-- <li><hr class="dropdown-divider"></li> -->
             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
           </ul>

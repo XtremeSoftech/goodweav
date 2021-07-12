@@ -56,13 +56,11 @@
                                 <h2>25</h2><span>Issued</span>
                             </div>
                         </div>
-                        <a href="labelsrequested.php">
                         <div class="col-md-12 col-xs-12">
                             <div class="card shadow">
                                 <h2>25</h2><span>Pending</span>
                             </div>
                         </div>
-                        </a>
                         <div class="col-md-12 col-xs-12">
                             <div class="card shadow">
                                 <h2>25</h2><span>In-Progress</span>
