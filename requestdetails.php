@@ -1,3 +1,20 @@
+<?php
+    include('./php-include/conn.php');
+
+    if(empty($_GET['id'])){
+        echo "<script>alert('Something Went Wrong .');window.location.href='./labelsrequested.php';</script>";
+    }
+    else{
+        $exp_code = $_GET['id'];
+    }
+
+    
+?>
+<?php
+    $qp = mysqli_fetch_array(mysqli_query($db, "select * from expoter where exporter_code='$exp_code' and flg='N'"));
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +27,8 @@
     <section>
         <div class=" mt-5">
             <div class="card shadow p-4">
-                <h3>Exporter Name: <span> Digital Tech Services Pvt Ltd</span></h3>
-                <h4>Exporter Code: <span> 123456</span></h4>
+                <h3>Exporter Name: <span> <?php echo $qp['exporter_name']; ?></span></h3>
+                <h4>Exporter Code: <span> <?php echo $qp['exporter_code']; ?></span></h4>
 
                 <hr>
                 <div class="table-responsive">
