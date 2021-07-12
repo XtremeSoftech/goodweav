@@ -19,6 +19,7 @@
                         <thead>
                             <tr>
                                 <th>Sl No.</th>
+                                <th>Date</th>
                                 <th>Purchase Order No.</th>
                                 <th>DCPI No</th>
                                 <th>Sub-Contractor/Factory</th>
@@ -40,7 +41,8 @@
 
                             <tr>
                                 <td>1</td>
-                                <td>3693168</td>
+                                <td><input type="date"></td>
+                                <td><input type="text"></td>
                                 <td>066-04-7648</td>
                                 <td>Obeetee Pvt Ltd (Unit-2) </td>
                                 <td>Rug</td>
@@ -62,6 +64,7 @@
 
                             <tr>
                                 <td>2</td>
+                                <td>14-june-2021</td>
                                 <td>36321118</td>
                                 <td>066-04-7648</td>
                                 <td>Obeetee Pvt Ltd (Unit-2) </td>
@@ -84,7 +87,76 @@
 
                             <tr>
                                 <td>3</td>
+                                <td>10-june-2021</td>
                                 <td>369342</td>
+                                <td>066-04-7648</td>
+                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>Rug</td>
+                                <td>FLAT WEAVE</td>
+                                <td>EPT0011785</td>
+                                <td><select name="labelType" id="labelType">
+                                        <option value="1">Test</option>
+                                        <option value="2">Test 2</option>
+                                    </select></td>
+                                <td>rolls</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>12-june-2021</td>
+                                <td>3693168</td>
+                                <td>066-04-7648</td>
+                                <td>xdt </td>
+                                <td>Rug</td>
+                                <td>FLAT WEAVE</td>
+                                <td>EPT0011785</td>
+                                <td><select name="labelType" id="labelType">
+                                        <option value="1">Test</option>
+                                        <option value="2">Test 2</option>
+                                    </select></td>
+                                <td>rolls</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>12-june-2021</td>
+                                <td>3693168</td>
+                                <td>066-04-7648</td>
+                                <td>xdt </td>
+                                <td>Rug</td>
+                                <td>FLAT WEAVE</td>
+                                <td>EPT0011785</td>
+                                <td><select name="labelType" id="labelType">
+                                        <option value="1">Test</option>
+                                        <option value="2">Test 2</option>
+                                    </select></td>
+                                <td>rolls</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>600</td>
+                                <td>10</td>
+                                <td>20</td>
+
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>14-june-2021</td>
+                                <td>36321118</td>
                                 <td>066-04-7648</td>
                                 <td>Obeetee Pvt Ltd (Unit-2) </td>
                                 <td>Rug</td>
