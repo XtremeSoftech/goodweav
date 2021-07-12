@@ -25,9 +25,8 @@
           </ul>
         </li>
       </ul>
-      <span class="navbar-text">
-        Navbar text with an inline element
-      </span>
+      <a href="adddetails.php">
+      <span class="navbar-text">ADD Admin Fields</span></a>
     </div>
   </div>
 </nav>

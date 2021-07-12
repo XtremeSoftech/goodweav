@@ -41,8 +41,8 @@
 
                             <tr>
                                 <td>1</td>
-                                <td><input type="date"></td>
-                                <td><input type="text"></td>
+                                <td>14-june-2021</td>
+                                <td>36321118</td>
                                 <td>066-04-7648</td>
                                 <td>Obeetee Pvt Ltd (Unit-2) </td>
                                 <td>Rug</td>
