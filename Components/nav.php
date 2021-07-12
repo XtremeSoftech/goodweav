@@ -24,7 +24,13 @@
             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
           </ul>
         </li>
+        <li class="nav-item">
+          <a href="requestlabel.php"><button class="btn-primary text-white">Requested LABELS</button></a>
+          
+        </li>
+        
       </ul>
+
       <a href="adddetails.php">
       <span class="navbar-text">ADD Admin Fields</span></a>
     </div>
