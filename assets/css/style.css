@@ -1,4 +1,3 @@
-
 .form-design .row {
   padding: 10px;
 }
@@ -6,8 +5,8 @@
 .nav-link {
   border-bottom: tomato;
 }
-#index-style{
-    background-color: #d4d4d4;
+#index-style {
+  background-color: #d4d4d4;
 }
 
 #home {
@@ -22,26 +21,22 @@
   border-color: transparent;
 }
 
-
-
-
-#home .card .icon{
-    color: #d4d4d4;
-    width: 50px;
+#home .card .icon {
+  color: #d4d4d4;
+  width: 50px;
 }
 
-#home .card img{
-    margin-left: -10px;
-    width: 60px;
-    
+#home .card img {
+  margin-left: -10px;
+  width: 60px;
 }
 
-#home .card h2{
-    color: #004783;
+#home .card h2 {
+  color: #004783;
 }
 
-#home .card span{
-    color: #004783;
+#home .card span {
+  color: #004783;
 }
 
 #home #alt-card {
@@ -51,12 +46,12 @@
   border-color: transparent;
 }
 
-#home #alt-card h2{
-    color: #004783;
+#home #alt-card h2 {
+  color: #004783;
 }
 
 #home #alt-card h4 {
-    color: #004783;
+  color: #004783;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -74,29 +69,28 @@
 }
 
 #home #alt-card :hover {
-
   background-color: rgb(173, 28, 28);
   border-color: transparent;
 }
 
-#add-form .row input{
-    border-color: #004783;
-    border-radius: 0%;
-    /* border-style: solid 2px; */
-    border-left: transparent;
-    border-top: transparent;
-    border-right: transparent;
+#add-form .row input {
+  border-color: #004783;
+  border-radius: 0%;
+  /* border-style: solid 2px; */
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
 }
 
-#expimp-bg{
-  background-image: linear-gradient(90deg, #004783, #01ADDC)
+#expimp-bg {
+  background-image: linear-gradient(90deg, #004783, #01addc);
 }
 
-#expimp{
+#expimp {
   margin-top: 30px;
 }
 
-#expimp .expimp-left{
+#expimp .expimp-left {
   color: white;
   padding: 20px;
   padding-top: 150px;
@@ -104,16 +98,61 @@
   text-align: center;
 }
 
-#expimp .expimp-left i{
+#expimp .expimp-left i {
   size: 20px;
   padding-bottom: 30px;
 }
 
-#expimp .expimp-left h3{
+#expimp .expimp-left h3 {
   padding-bottom: 15px;
 }
 
-#expimp .expimp-right{
+#expimp .expimp-right {
   background-color: #ffffff;
   border-radius: 5em 0px 0px 5em / 15em;
+  padding: 25px;
+  /* text-align: center; */
+}
+
+#expimp .expimp-right h4 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#expimp .expimp-right .fields hr{
+  margin-top: 30px;
+  padding-top: 2px;
+  
+}
+
+#expimp .expimp-right .fields .form-group {
+  margin: 0px 0px 20px 80px;
+}
+
+#expimp .expimp-right .fields .form-group input {
+
+  border-color: #004783 1px;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+  padding: 0px 5px 5px 5px;
+  /* margin-right: 10px; */
+}
+
+#expimp .expimp-right .fields .form-group input::selection {
+  color: #d4d4d4;
+  border-color: #004783 1px;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+  padding: 0px 5px 5px 5px;
+  /* margin-right: 10px; */
+}
+
+#expimp .expimp-right .fields .form-group input::placeholder {
+  color: #d4d4d4;
+}
+
+#expimp .expimp-right .fields .form-group input:hover {
+  border-color: #01addc;
 }
