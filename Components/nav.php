@@ -25,7 +25,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="requestlabel.php"><button class="btn-primary text-white">Requested LABELS</button></a>
+          <a href="requestlabel.php"><button class="btn-primary text-white">Requet LABELS</button></a>
           
         </li>
         

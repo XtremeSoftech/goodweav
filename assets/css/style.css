@@ -87,3 +87,33 @@
     border-top: transparent;
     border-right: transparent;
 }
+
+#expimp-bg{
+  background-image: linear-gradient(90deg, #004783, #01ADDC)
+}
+
+#expimp{
+  margin-top: 30px;
+}
+
+#expimp .expimp-left{
+  color: white;
+  padding: 20px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+#expimp .expimp-left i{
+  size: 20px;
+  padding-bottom: 30px;
+}
+
+#expimp .expimp-left h3{
+  padding-bottom: 15px;
+}
+
+#expimp .expimp-right{
+  background-color: #ffffff;
+  border-radius: 5em 0px 0px 5em / 15em;
+}

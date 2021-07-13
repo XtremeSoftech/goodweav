@@ -12,4 +12,7 @@
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 
+<!-- Font Awesome Link -->
+<script src="https://kit.fontawesome.com/5e0d9e5f65.js" crossorigin="anonymous"></script>
+
 </head>
