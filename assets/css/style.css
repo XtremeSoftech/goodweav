@@ -84,6 +84,7 @@
 
 #expimp-bg {
   background-image: linear-gradient(90deg, #004783, #01addc);
+
 }
 
 #expimp {
@@ -116,7 +117,8 @@
 
 #expimp .expimp-right h4 {
   text-align: center;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 #expimp .expimp-right .fields hr{
@@ -155,4 +157,57 @@
 
 #expimp .expimp-right .fields .form-group input:hover {
   border-color: #01addc;
+}
+
+/* CSS for Label.php  */
+
+#req_lab{
+  margin-top: 10px;
+}
+
+#req_lab .card{
+  margin: 15px;
+  padding: 20px;
+}
+
+#req_lab .card .details{
+  padding-top: 20px;
+}
+
+#req_lab .card h4{
+  color: #004783;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+#req_lab .card h6{
+  font-size: 14px;
+}
+
+#req_lab .card input{
+  margin: 10px;
+  padding: 5px;
+border-color: #004783;
+border-left: transparent;
+border-top: transparent;
+border-right: transparent;
+
+}
+
+#req_lab .card input:hover{
+  color: #01addc;
+}
+
+#req_lab .card button{
+color: #004783;
+background-color: #d4d4d4;
+padding:8px 30px 8px 30px;
+border-radius: 20px;
+border-color: transparent;
+}
+
+#req_lab .card button:hover{
+  color: #ffffff;
+  background-color: #004783;
 }
