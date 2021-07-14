@@ -24,8 +24,19 @@
             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
           </ul>
         </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            VIEW
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="exporterdetails.php">Exporter</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Importer</a></li> -->
+          </ul>
+        </li>
+
         <li class="nav-item">
-          <a href="requestlabel.php"><button class="btn-primary text-white">Requet LABELS</button></a>
+          <a href="label.php"><button class="btn-primary text-white">Request LABELS</button></a>
           
         </li>
         

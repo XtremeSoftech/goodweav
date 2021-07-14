@@ -260,3 +260,13 @@
   background-color: #004783;
 }
 
+/* Exporter Details CSS */
+
+#view-details{
+  margin: 5px;
+}
+
+#view-details .table-responsive{
+  background-color: #ffffff;
+  padding: 20px;
+}

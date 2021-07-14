@@ -82,7 +82,9 @@ include('./php-include/implementation.php');
                     <h5>Mention Label Details</h5>
                     <div class="row">
                         <input class="col-md-6" type="text" name="p-o" id="po" placeholder="PO# - PO Date">
-                        <input class="col-md-5" type="date" name="p-o" id="podate" placeholder="PO Date">
+                        <input class="col-md-5" type="date" name="podate" id="podate" placeholder="PO Date">
+
+                        <input class="col-md-11" type="text" name="dpci" id="dpci" placeholder="DPCI NO.">
                     
                         <select class="col-md-5" name="sector" id="">
                             <option value="0">Sectors</option>
