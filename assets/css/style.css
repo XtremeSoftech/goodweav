@@ -84,7 +84,6 @@
 
 #expimp-bg {
   background-image: linear-gradient(90deg, #004783, #01addc);
-
 }
 
 #expimp {
@@ -121,10 +120,9 @@
   padding-bottom: 30px;
 }
 
-#expimp .expimp-right .fields hr{
+#expimp .expimp-right .fields hr {
   margin-top: 30px;
   padding-top: 2px;
-  
 }
 
 #expimp .expimp-right .fields .form-group {
@@ -132,7 +130,6 @@
 }
 
 #expimp .expimp-right .fields .form-group input {
-
   border-color: #004783 1px;
   border-left: transparent;
   border-top: transparent;
@@ -161,53 +158,96 @@
 
 /* CSS for Label.php  */
 
-#req_lab{
+#req_lab {
   margin-top: 10px;
 }
 
-#req_lab .card{
+#req_lab .card {
   margin: 15px;
   padding: 20px;
 }
 
-#req_lab .card .details{
+#req_lab .card .details {
   padding-top: 20px;
 }
 
-#req_lab .card h4{
+#req_lab .card h5 {
   color: #004783;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
-#req_lab .card h6{
+#req_lab .card h6 {
   font-size: 14px;
 }
 
-#req_lab .card input{
+#req_lab .card input {
   margin: 10px;
   padding: 5px;
-border-color: #004783;
-border-left: transparent;
-border-top: transparent;
-border-right: transparent;
-
+  border-color: #004783;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
 }
 
-#req_lab .card input:hover{
+#req_lab .card input:hover {
   color: #01addc;
 }
 
-#req_lab .card button{
-color: #004783;
-background-color: #d4d4d4;
-padding:8px 30px 8px 30px;
-border-radius: 20px;
-border-color: transparent;
+#req_lab .card .select-imp{
+  position: relative;
 }
 
-#req_lab .card button:hover{
+#req_lab .card .select-imp select{
+  /* display: none; */
+}
+
+#req_lab .card .select-imp .select-selected{
+  background-color: DodgerBlue;
+}
+
+#req_lab .card .select-imp .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+#req_lab .card option {
+  color: black;
+}
+
+#req_lab .card .select-imp input {
+  margin: 10px;
+  padding: 5px;
+  border-color: #004783;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+#req_lab .card .select-imp input:hover {
+  color: #01addc;
+}
+
+
+
+
+
+#req_lab .card button {
+  color: #004783;
+  background-color: #d4d4d4;
+  padding: 8px 30px 8px 30px;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+#req_lab .card button:hover {
   color: #ffffff;
   background-color: #004783;
 }

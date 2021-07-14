@@ -21,7 +21,7 @@ include('./php-include/implementation.php');
         <div class="row">
             <div class="col-md-4">
                 <div class="card shadow">
-                    <h4>Confirm your Exporter Details</h4>
+                    <h5>Confirm your Exporter Details</h5>
                     <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                         <div>
                             <input type="text" name="expcode" id="expcode" placeholder="Enter Exporter Code"><button><i class="bi bi-search"><input type="hidden" name="search" class="btn-success"></i></button>
@@ -53,8 +53,8 @@ include('./php-include/implementation.php');
                         </div>
                         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                             <div class="col-md-12" style="text-align: right;">
-                            <input type="hidden" name="exp_code" value="<?php echo $full_query['exporter_code']; ?>">
-                            <button type="submit" name="confirm_exp">Confirm Exporter Details</button>
+                                <input type="hidden" name="exp_code" value="<?php echo $full_query['exporter_code']; ?>">
+                                <button type="submit" name="confirm_exp">Confirm Exporter Details</button>
                             </div>
                         </form>
                     <?php } ?>
@@ -63,19 +63,34 @@ include('./php-include/implementation.php');
             </div>
             <div class="col-md-4">
                 <div class="card shadow">
-                    <h4>Add Importer Details</h4>
-                    <div>
-                        <input type="text" name="impcode" id="impcode" placeholder="Enter Importer Code"><button><i class="bi bi-search"><input type="hidden" name="search" class="btn-success"></i></button>
+                    <h5>Add Importer Details</h5>
+                    <div class="select-imp">
+                        <!-- <input type="text" name="impcode" id="impcode" placeholder="Enter Importer Code"><button><i class="bi bi-search"><input type="hidden" name="search" class="btn-success"></i></button> -->
+                        <select name="" id="">
+                            <option value="0">Select Importer</option>
+                            <option value="1">IMP001</option>
+                            <option value="2">IMP015</option>
+                            <option value="3">IMP112</option>
+                        </select>
                     </div>
+                    <div class="col-md-12 details">
 
-                    <!-- Fetch all Import details Like Exporter                                                                       -->
+                        <h6><strong>Imp Code: </strong><span><?php echo $full_query['exporter_code']; ?></span></h6>
+                        <h6><strong>Imp Name: </strong><span><?php echo ucwords($full_query['exporter_name']); ?></span></h6>
+
+                    </div>
 
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card shadow">
-                    <h4>Mention Label Details</h4>
+                    <h5>Mention Label Details</h5>
+                    <div class="col-md-8">
+                        <input type="text" name="p-o" id="po" placeholder="PO Number">
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </section>
