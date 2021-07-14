@@ -183,40 +183,52 @@
 }
 
 #req_lab .card input {
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
+  color: #d4d4d4;
   border-color: #004783;
   border-left: transparent;
   border-top: transparent;
   border-right: transparent;
 }
 
+#req_lab .card input::placeholder {
+  color: #d4d4d4;
+}
+
 #req_lab .card input:hover {
   color: #01addc;
+  border-color: #01addc;
 }
 
-#req_lab .card .select-imp{
-  position: relative;
+
+#req_lab .card select {
+  margin: 5px;
+  padding: 5px;
+  border-color: #004783 solid;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
 }
 
-#req_lab .card .select-imp select{
-  /* display: none; */
+#req_lab .card select::before {
+  margin: 5px;
+  padding: 5px;
+  border-color: #004783 solid;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
 }
 
-#req_lab .card .select-imp .select-selected{
-  background-color: DodgerBlue;
+#req_lab .card select::after {
+  background-color: aqua;
 }
 
-#req_lab .card .select-imp .select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+#req_lab .card select:hover {
+  color: #01addc;
+  border-color: #01addc;
 }
+
 
 #req_lab .card option {
   color: black;
@@ -235,10 +247,6 @@
   color: #01addc;
 }
 
-
-
-
-
 #req_lab .card button {
   color: #004783;
   background-color: #d4d4d4;
@@ -251,3 +259,4 @@
   color: #ffffff;
   background-color: #004783;
 }
+
