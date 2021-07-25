@@ -18,7 +18,8 @@ include('./php-include/implementation.php');
 
 
     <section id="req_lab">
-        <div class="row">
+        <center>
+            <?php if($label == 0){?>
             <div class="col-md-4">
                 <div class="card shadow">
                     <h5>Confirm your Exporter Details</h5>
@@ -32,30 +33,40 @@ include('./php-include/implementation.php');
                     ?>
                         <div class="col-md-12 details">
 
-                            <h6><strong>Code: </strong><span><?php echo $full_query['exporter_code']; ?></span></h6>
-                            <h6><strong>Name: </strong><span><?php echo ucwords($full_query['exporter_name']); ?></span></h6>
-                            <h6><strong>Registration Date: </strong><span><?php echo date('d-M-Y', strtotime($full_query['registration_date'])); ?></span></h6>
-                            <h6><strong>Address: </strong><span><?php echo $full_query['address']; ?></span></h6>
-                            <hr>
-                            <h6><strong>Status: </strong><span><strong style="color:<?php if ($full_query['website'] == 1) {
-                                                                                        echo "green";
-                                                                                    } else {
-                                                                                        echo "red";
-                                                                                    } ?>;"><?php if ($full_query['website'] == 1) {
-                                                                                                echo "Active";
-                                                                                            } else {
-                                                                                                echo "Not-Active";
-                                                                                            } ?></strong></span></h6>
-                            <h6><strong>Country: </strong><span><?php echo $full_query['country']; ?></span></h6>
-                            <h6><strong>Website: </strong><span><a href="<?php echo $full_query['website']; ?>" target="blank"><?php echo $full_query['website']; ?></a></span></h6>
-                            <h6><strong>Delicensed Date: </strong><span><?php echo date('d-M-Y', strtotime($full_query['delicensed_date'])); ?></span></h6>
-                            <h6><strong>Re-Registration Date: </strong><span><?php echo date('d-M-Y', strtotime($full_query['re_registration_date'])); ?></span></h6>
+                            <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+
+                                <h6><strong>Code: </strong><span><?php echo $full_query['exporter_code']; ?></span></h6>
+                                <h6><strong>Name: </strong><span><?php echo ucwords($full_query['exporter_name']); ?></span></h6>
+                                <h6><strong>Registration Date: </strong><span><?php echo date('d-M-Y', strtotime($full_query['registration_date'])); ?></span></h6>
+                                <h6><strong>Address: </strong><span><?php echo $full_query['address']; ?></span></h6>
+                                <hr>
+                                <h6><strong>Status: </strong><span><strong style="color:<?php if ($full_query['website'] == 1) {
+                                                                                            echo "green";
+                                                                                        } else {
+                                                                                            echo "red";
+                                                                                        } ?>;"><?php if ($full_query['website'] == 1) {
+                                                                                                    echo "Active";
+                                                                                                } else {
+                                                                                                    echo "Not-Active";
+                                                                                                } ?></strong></span></h6>
+                                <h6><strong>Country: </strong><span><?php echo $full_query['country']; ?></span></h6>
+                                <h6><strong>Website: </strong><span><a href="<?php echo $full_query['website']; ?>" target="blank"><?php echo $full_query['website']; ?></a></span></h6>
+                                <h6><strong>Delicensed Date: </strong><span><?php if($full_query['delicensed_date'] == NULL){echo "N/A";}else{echo date('d-M-Y', strtotime($full_query['delicensed_date']));} ?></span></h6>
+                                <h6><strong>Re-Registration Date: </strong><span><?php if($full_query['re_registration_date'] == NULL){echo "N/A";}else{echo date('d-M-Y', strtotime($full_query['re_registration_date']));} ?></span></h6>
+                                <input type="hidden" name="exp_code" value="<?php echo $full_query['exporter_code']; ?>">
+                                <input type="submit" name="confirm_exp" value="Confirm Details">
+                            </form>
                         </div>
 
                     <?php } ?>
 
                 </div>
-            </div>
+            </div><?php }?>
+
+            <?php
+                if($label == 1){
+            ?>
+
             <div class="col-md-4">
                 <div class="card shadow">
                     <h5>Add Importer Details</h5>
@@ -70,13 +81,14 @@ include('./php-include/implementation.php');
                     </div>
                     <div class="col-md-12 details">
 
-                        <h6><strong>Imp Code: </strong><span><?php echo $full_query['exporter_code']; ?></span></h6>
+                        <h6><strong>Imp Code: </strong><span><?php echo $_SESSION['exp_code']; ?></span></h6>
                         <h6><strong>Imp Name: </strong><span><?php echo ucwords($full_query['exporter_name']); ?></span></h6>
 
                     </div>
 
                 </div>
-            </div>
+            </div><?php }?>
+            <?php if($label == 2){?>
             <div class="col-md-4" id="label">
                 <div class="card shadow">
                     <h5>Mention Label Details</h5>
@@ -135,8 +147,8 @@ include('./php-include/implementation.php');
                 </div>
 
 
-            </div>
-        </div>
+            </div><?php }?>
+        </center>
     </section>
 
 
