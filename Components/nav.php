@@ -30,7 +30,7 @@
             VIEW
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="exporterdetails.php">Exporter</a></li>
+            <li><a class="dropdown-item" href="exporter.php">Exporter</a></li>
             <!-- <li><a class="dropdown-item" href="#">Importer</a></li> -->
           </ul>
         </li>

@@ -264,9 +264,20 @@
 
 #view-details{
   margin: 5px;
+  background-color: #ffffff;
+}
+
+#view-details h4{
+  padding-top: 30px;
+  color: #000000;
+  text-align: center;
 }
 
 #view-details .table-responsive{
   background-color: #ffffff;
   padding: 20px;
+}
+
+#exampleModal .modal{
+  width: 100%;
 }

@@ -51,7 +51,7 @@ include('./php-include/implementation.php');
                             <h6><strong>Delicensed Date: </strong><span><?php echo date('d-M-Y', strtotime($full_query['delicensed_date'])); ?></span></h6>
                             <h6><strong>Re-Registration Date: </strong><span><?php echo date('d-M-Y', strtotime($full_query['re_registration_date'])); ?></span></h6>
                         </div>
-                        
+
                     <?php } ?>
 
                 </div>
@@ -81,53 +81,56 @@ include('./php-include/implementation.php');
                 <div class="card shadow">
                     <h5>Mention Label Details</h5>
                     <div class="row">
-                        <input class="col-md-6" type="text" name="p-o" id="po" placeholder="PO# - PO Date">
-                        <input class="col-md-5" type="date" name="podate" id="podate" placeholder="PO Date">
+                        <label for="p-o" class="col-md-12">PO Number
+                            <input class="col-md-5" type="text" name="p-o" id="po" placeholder="PO Number">
 
-                        <input class="col-md-11" type="text" name="dpci" id="dpci" placeholder="DPCI NO.">
-                    
-                        <select class="col-md-5" name="sector" id="">
-                            <option value="0">Sectors</option>
-                            <option value="1">Carpets</option>
-                            <option value="2">Home Textile</option>
-                        </select>
+                            <label for="podate" class="col-md-12">PO Date &nbsp;&nbsp; &nbsp;&nbsp;
+                                <input class="col-md-5" type="date" name="podate" id="podate" placeholder="PO Date"></label>
 
-                        <select class="col-md-6" name="varieties" id="">
-                            <option value="0">Varieties</option>
-                            <option value="1">Hand-tufted</option>
-                            <option value="2">Hand-knotted</option>
-                            <option value="3">Handloom</option>
-                        </select>
+                            <input class="col-md-11" type="text" name="dpci" id="dpci" placeholder="DPCI NO.">
 
-                        <select class="col-md-11" name="subcontractor" id="">
-                            <option value="0">Sub Contractor</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        
-                        <input class="col-md-5" type="text" name="design_quality" id="design_quality" placeholder="Design & Quality">
-                        
-                        <select class="col-md-6" name="label_type" id="label_type">
-                            <option value="0">Label Type</option>
-                            <option value="1">M-Series</option>
-                            <option value="2">T-Series</option>
-                        </select>
-                        
-                        <input class="col-md-3" type="number" name="rolls" id="rolls" placeholder="No of Rolls (If applicable)">
+                            <select class="col-md-5" name="sector" id="">
+                                <option value="0">Sectors</option>
+                                <option value="1">Carpets</option>
+                                <option value="2">Home Textile</option>
+                            </select>
 
-                        <input class="col-md-5" type="number" name="pieces" id="rolls" placeholder="No of Pieces">
+                            <select class="col-md-6" name="varieties" id="">
+                                <option value="0">Varieties</option>
+                                <option value="1">Hand-tufted</option>
+                                <option value="2">Hand-knotted</option>
+                                <option value="3">Handloom</option>
+                            </select>
 
-                        <input class="col-md-3" type="text" name="Cost_per_uni" id="Cost_per_unit" placeholder="Cost/Unit">
+                            <select class="col-md-11" name="subcontractor" id="">
+                                <option value="0">Sub Contractor</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                            <input class="col-md-5" type="text" name="design_quality" id="design_quality" placeholder="Design & Quality">
+
+                            <select class="col-md-6" name="label_type" id="label_type">
+                                <option value="0">Label Type</option>
+                                <option value="1">M-Series</option>
+                                <option value="2">T-Series</option>
+                            </select>
+
+                            <input class="col-md-3" type="number" name="rolls" id="rolls" placeholder="No of Rolls (If applicable)">
+
+                            <input class="col-md-4" type="number" name="pieces" id="rolls" placeholder="No of Pieces">
+
+                            <input class="col-md-3" type="text" name="Cost_per_uni" id="Cost_per_unit" placeholder="Cost/Unit">
                     </div>
                     <br>
-                    
+
                     <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-                            <div class="col-md-12" style="text-align: center;">
-                                <input type="hidden" name="exp_code" value="<?php echo $full_query['exporter_code']; ?>">
-                                <button type="submit" name="confirm_exp">SUBMIT REQUEST</button>
-                            </div>
-                        </form>
+                        <div class="col-md-12" style="text-align: center;">
+                            <input type="hidden" name="exp_code" value="<?php echo $full_query['exporter_code']; ?>">
+                            <button type="submit" name="confirm_exp">SUBMIT REQUEST</button>
+                        </div>
+                    </form>
 
                 </div>
 
