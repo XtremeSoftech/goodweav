@@ -18,8 +18,8 @@
             ADD
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="addexporter.php">Add New Exporter</a></li>
-            <li><a class="dropdown-item" href="#">Add New Importer</a></li>
+            <li><a class="dropdown-item" href="addexp.php">Add New Exporter</a></li>
+            <li><a class="dropdown-item" href="addimp.php">Add New Importer</a></li>
             <!-- <li><hr class="dropdown-divider"></li> -->
             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
           </ul>

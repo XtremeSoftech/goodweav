@@ -20,7 +20,7 @@
         //query for checking data is present or not
         $ch_q = mysqli_query($db, "select * from expoter where website='$exporter_website' and flg='N'");
         if(mysqli_num_rows($ch_q) > 0){
-            echo "<script>alert('Exporter Exists Already .');window.location.href='./addexporter.php';</script>";
+            echo "<script>alert('Exporter Exists Already .');window.location.href='./addexp.php';</script>";
         }
         else{
             //Insert Query
