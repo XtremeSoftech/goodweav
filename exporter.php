@@ -1,5 +1,9 @@
 <?php
-include('./php-include/conn.php');
+    
+    include('./php-include/conn.php');
+
+    include('./php-include/implementation.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -32,21 +36,21 @@ include('./php-include/conn.php');
                 <tbody>
                     <?php
                     $id = 1;
-                    $t = mysqli_query($db, "select e.exporter_code, exporter_name from expoter e join exporter_sub_info eb on e.exporter_code=eb.exporter_code WHERE e.flg='N'");
+                    $t = mysqli_query($db, "select * from expoter e join exporter_sub_info eb on e.exporter_code=eb.exporter_code WHERE e.flg='N'");
                     while ($r = mysqli_fetch_assoc($t)) {
                     ?>
-                        <?php
+                    <?php
                         $ep_c = $r['exporter_code'];
-                        $p = mysqli_query($db, "select COUNT(*) as count from requested_label where exporter_code='$ep_c';");
-                        while ($plo = mysqli_fetch_assoc($p)) {
-                        ?>
+                        $p = mysqli_query($db, "select COUNT(*) as count from link_exp_to_imp where exp_code='$ep_c';");
+                        while($plo = mysqli_fetch_assoc($p)){
+                    ?>
                             <tr>
                                 <!-- <td><?php echo $id++; ?></td> -->
-                                <td><?php echo $r['exporter_code']; ?></td>
+                                <td><?php echo strtoupper($r['exporter_code']); ?></td>
                                 <td><a href="exporterdetails.php?id=<?php echo $ep_c; ?>"><?php echo $r['exporter_name']; ?></a></td>
-                                <td>12 - March - 2020</td>
+                                <td><?php echo date('d-F-Y', strtotime($r['registration_date'])); ?></td>
                                 <td>10 - June - 2021</td>
-                                <td><a href="#exampleModal1" data-toggle="modal" data-target="#exampleModal1"><i><span>101</span></i></a>&nbsp;&nbsp;<a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><i><span>Link New Imp</span></i></a></td>
+                                <td><a href="#exampleModal1" data-toggle="modal" data-target="#exampleModal1"><i><span><?php echo $plo['count']; ?></span></i></a>&nbsp;&nbsp;<a href="./linking_imp.php?importer_linking_id=<?php echo $idp; ?>"><i><span>Link New Imp</span></i></a></td>
                                 <td>3</td>
                             </tr>
                     <?php }
@@ -72,7 +76,7 @@ include('./php-include/conn.php');
 
 
 
-    <!-- Modal View Imp Starts -->
+    <!-- Modal View Imp Starts 
 
     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width: 100%;">
         <div class="modal-dialog" role="document">
@@ -92,20 +96,15 @@ include('./php-include/conn.php');
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                   <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- Modal View Imp  Ends -->
+    <!-- Modal Link New Imp Starts
 
-
-
-    
-    <!-- Modal Link New Imp Starts -->
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width: 100%;">
+    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="" style="width: 100%; ">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -119,20 +118,29 @@ include('./php-include/conn.php');
                 <h5>Confirm Importer Details you want to Link</h5>
                     <form action="" method="POST">
                         <div>
-                            <input type="text" name="expcode" id="expcode" placeholder="Enter Importer Code"><button><i class="bi bi-search"><input type="hidden" name="search" class="btn-success"></i></button>
+                            <input type="text" name="impcode" id="expcode" placeholder="Enter Importer Code"><button><i class="bi bi-search"><input type="hidden" name="search-imp" class="btn-success"></i></button>
                         </div>
                     </form>
                 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Link Importer</button>
-                </div>
+
+                <form action="" method="POST">
+                    <div style="margin-left: 15px;">
+                            <strong>Imp Code</strong>&nbsp;:- <br>
+                            <strong>Name</strong>&nbsp;:- <br>
+                            <strong>Email</strong>&nbsp;:- <br>
+                            <strong>Contact</strong>&nbsp;:- <br>
+                            <strong>Website</strong>&nbsp;:- 
+                            
+                    <div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Link Importer</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-
-    <!-- Modal Link New Imp  Ends -->
+    </div>Modal Link New Imp  Ends -->
 
 
     <script>

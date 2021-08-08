@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2021 at 12:29 PM
+-- Generation Time: Aug 08, 2021 at 01:26 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -65,6 +65,7 @@ CREATE TABLE `expoter` (
   `email` varchar(100) NOT NULL,
   `contact` varchar(50) NOT NULL,
   `website` varchar(100) NOT NULL,
+  `hash` varchar(100) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 0,
   `flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -84,6 +85,7 @@ CREATE TABLE `importer` (
   `email` varchar(100) NOT NULL,
   `contact` varchar(100) NOT NULL,
   `website` varchar(100) NOT NULL,
+  `hash` varchar(100) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 0,
   `flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -128,6 +130,19 @@ CREATE TABLE `label_type` (
   `id` int(11) NOT NULL,
   `type_name` varchar(100) NOT NULL,
   `del_flg` char(1) NOT NULL DEFAULT 'N'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `link_exp_to_imp`
+--
+
+CREATE TABLE `link_exp_to_imp` (
+  `id` int(11) NOT NULL,
+  `exp_code` varchar(100) NOT NULL,
+  `imp_code` varchar(100) NOT NULL,
+  `flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -225,6 +240,14 @@ ALTER TABLE `label_type`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `link_exp_to_imp`
+--
+ALTER TABLE `link_exp_to_imp`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `exp_code` (`exp_code`),
+  ADD KEY `imp_code` (`imp_code`);
+
+--
 -- Indexes for table `requested_label`
 --
 ALTER TABLE `requested_label`
@@ -281,6 +304,12 @@ ALTER TABLE `label_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `link_exp_to_imp`
+--
+ALTER TABLE `link_exp_to_imp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `requested_label`
 --
 ALTER TABLE `requested_label`
@@ -313,6 +342,13 @@ ALTER TABLE `exporter_sub_info`
 --
 ALTER TABLE `importer_sub_info`
   ADD CONSTRAINT `importer_sub_info_ibfk_1` FOREIGN KEY (`importer_code`) REFERENCES `importer` (`importer_code`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `link_exp_to_imp`
+--
+ALTER TABLE `link_exp_to_imp`
+  ADD CONSTRAINT `link_exp_to_imp_ibfk_1` FOREIGN KEY (`exp_code`) REFERENCES `expoter` (`exporter_code`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `link_exp_to_imp_ibfk_2` FOREIGN KEY (`imp_code`) REFERENCES `importer` (`importer_code`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `requested_label`
