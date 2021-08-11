@@ -38,6 +38,7 @@
                     $id = 1;
                     $t = mysqli_query($db, "select * from expoter e join exporter_sub_info eb on e.exporter_code=eb.exporter_code WHERE e.flg='N'");
                     while ($r = mysqli_fetch_assoc($t)) {
+                        $idp = $r['hash'];
                     ?>
                     <?php
                         $ep_c = $r['exporter_code'];
@@ -50,7 +51,7 @@
                                 <td><a href="exporterdetails.php?id=<?php echo $ep_c; ?>"><?php echo $r['exporter_name']; ?></a></td>
                                 <td><?php echo date('d-F-Y', strtotime($r['registration_date'])); ?></td>
                                 <td>10 - June - 2021</td>
-                                <td><a href="#exampleModal1" data-toggle="modal" data-target="#exampleModal1"><i><span><?php echo $plo['count']; ?></span></i></a>&nbsp;&nbsp;<a href="./linking_imp.php?importer_linking_id=<?php echo $idp; ?>"><i><span>Link New Imp</span></i></a></td>
+                                <td><a href="./linked_member.php?exporter_id=<?php echo $idp; ?>"><i><span><?php echo $plo['count']; ?></span></i></a>&nbsp;&nbsp;<a href="./linking_imp.php?importer_linking_id=<?php echo $idp; ?>"><i><span>Link New Imp</span></i></a></td>
                                 <td>3</td>
                             </tr>
                     <?php }
