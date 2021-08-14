@@ -1,0 +1,283 @@
+.form-design .row {
+  padding: 10px;
+}
+
+.nav-link {
+  border-bottom: tomato;
+}
+#index-style {
+  background-color: #d4d4d4;
+}
+
+#home {
+  padding: 25px;
+}
+
+#home .card {
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: white;
+  border-color: transparent;
+}
+
+#home .card .icon {
+  color: #d4d4d4;
+  width: 50px;
+}
+
+#home .card img {
+  margin-left: -10px;
+  width: 60px;
+}
+
+#home .card h2 {
+  color: #004783;
+}
+
+#home .card span {
+  color: #004783;
+}
+
+#home #alt-card {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: rgb(174, 179, 255);
+  border-color: transparent;
+}
+
+#home #alt-card h2 {
+  color: #004783;
+}
+
+#home #alt-card h4 {
+  color: #004783;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#home #alt-card span {
+  font-size: 12px;
+}
+
+#home #alt-card .card {
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-color: transparent;
+}
+
+#home #alt-card :hover {
+  background-color: rgb(173, 28, 28);
+  border-color: transparent;
+}
+
+#add-form .row input {
+  border-color: #004783;
+  border-radius: 0%;
+  /* border-style: solid 2px; */
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+#expimp-bg {
+  background-image: linear-gradient(90deg, #004783, #01addc);
+}
+
+#expimp {
+  margin-top: 30px;
+}
+
+#expimp .expimp-left {
+  color: white;
+  padding: 20px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+#expimp .expimp-left i {
+  size: 20px;
+  padding-bottom: 30px;
+}
+
+#expimp .expimp-left h3 {
+  padding-bottom: 15px;
+}
+
+#expimp .expimp-right {
+  background-color: #ffffff;
+  border-radius: 5em 0px 0px 5em / 15em;
+  padding: 25px;
+  /* text-align: center; */
+}
+
+#expimp .expimp-right h4 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#expimp .expimp-right .fields hr {
+  margin-top: 30px;
+  padding-top: 2px;
+}
+
+#expimp .expimp-right .fields .form-group {
+  margin: 0px 0px 20px 80px;
+}
+
+#expimp .expimp-right .fields .form-group input {
+  border-color: #004783 1px;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+  padding: 0px 5px 5px 5px;
+  /* margin-right: 10px; */
+}
+
+#expimp .expimp-right .fields .form-group input::selection {
+  color: #d4d4d4;
+  border-color: #004783 1px;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+  padding: 0px 5px 5px 5px;
+  /* margin-right: 10px; */
+}
+
+#expimp .expimp-right .fields .form-group input::placeholder {
+  color: #d4d4d4;
+}
+
+#expimp .expimp-right .fields .form-group input:hover {
+  border-color: #01addc;
+}
+
+/* CSS for Label.php  */
+
+#req_lab {
+  margin-top: 10px;
+}
+
+#req_lab .card {
+  margin: 15px;
+  padding: 20px;
+}
+
+#req_lab .card .details {
+  padding-top: 20px;
+}
+
+#req_lab .card h5 {
+  color: #004783;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#req_lab .card h6 {
+  font-size: 14px;
+}
+
+#req_lab .card input {
+  margin: 5px;
+  padding: 5px;
+  color: #d4d4d4;
+  border-color: #004783;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+#req_lab .card input::placeholder {
+  color: #d4d4d4;
+}
+
+#req_lab .card input:hover {
+  color: #01addc;
+  border-color: #01addc;
+}
+
+
+#req_lab .card select {
+  margin: 5px;
+  padding: 5px;
+  border-color: #004783 solid;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+#req_lab .card select::before {
+  margin: 5px;
+  padding: 5px;
+  border-color: #004783 solid;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+#req_lab .card select::after {
+  background-color: aqua;
+}
+
+#req_lab .card select:hover {
+  color: #01addc;
+  border-color: #01addc;
+}
+
+
+#req_lab .card option {
+  color: black;
+}
+
+#req_lab .card .select-imp input {
+  margin: 10px;
+  padding: 5px;
+  border-color: #004783;
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+#req_lab .card .select-imp input:hover {
+  color: #01addc;
+}
+
+#req_lab .card button {
+  color: #004783;
+  background-color: #d4d4d4;
+  padding: 8px 30px 8px 30px;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+#req_lab .card button:hover {
+  color: #ffffff;
+  background-color: #004783;
+}
+
+/* Exporter Details CSS */
+
+#view-details{
+  margin: 5px;
+  background-color: #ffffff;
+}
+
+#view-details h4{
+  padding-top: 30px;
+  color: #000000;
+  text-align: center;
+}
+
+#view-details .table-responsive{
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+#exampleModal .modal{
+  width: 100%;
+}
