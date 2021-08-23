@@ -61,7 +61,7 @@
                                 <td>14-june-2021</td>
                                 <td>36321118</td>
                                 <td>066-04-7648</td>
-                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>ABCDXYZ Pvt Ltd</td>
                                 <td>Rug</td>
                                 <td>FLAT WEAVE</td>
                                 <td>EPT0011785</td>
@@ -84,7 +84,7 @@
                                 <td>14-june-2021</td>
                                 <td>36321118</td>
                                 <td>066-04-7648</td>
-                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>ABCDXYZ Pvt Ltd </td>
                                 <td>Rug</td>
                                 <td>FLAT WEAVE</td>
                                 <td>EPT0011785</td>
@@ -107,7 +107,7 @@
                                 <td>10-june-2021</td>
                                 <td>369342</td>
                                 <td>066-04-7648</td>
-                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>ABCDXYZ Pvt Ltd </td>
                                 <td>Rug</td>
                                 <td>FLAT WEAVE</td>
                                 <td>EPT0011785</td>
@@ -175,7 +175,7 @@
                                 <td>14-june-2021</td>
                                 <td>36321118</td>
                                 <td>066-04-7648</td>
-                                <td>Obeetee Pvt Ltd (Unit-2) </td>
+                                <td>ABCDXYZ Pvt Ltd</td>
                                 <td>Rug</td>
                                 <td>FLAT WEAVE</td>
                                 <td>EPT0011785</td>
