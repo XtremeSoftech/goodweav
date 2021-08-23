@@ -150,4 +150,34 @@
         }
     }
 
+
+
+    if(isset($_POST['request_raised'])){
+        $imp_code = mysqli_real_escape_string($db, $_POST['imp_code']);
+        $exp_code = mysqli_real_escape_string($db, $_POST['exp_code']);
+        $po_number = mysqli_real_escape_string($db, $_POST['p-o']);
+        $podate = mysqli_real_escape_string($db, $_POST['podate']);
+        $dpci = mysqli_real_escape_string($db, $_POST['dpci']);
+        $sector = mysqli_real_escape_string($db, $_POST['sector']);
+        $varity = mysqli_real_escape_string($db, $_POST['varieties']);
+        $sub = mysqli_real_escape_string($db, $_POST['subcontractor']);
+        $d_p = mysqli_real_escape_string($db, $_POST['design_quality']);
+        $l_t = mysqli_real_escape_string($db, $_POST['label_type']);
+        $roll = mysqli_real_escape_string($db, $_POST['rolls']);
+        $piece = mysqli_real_escape_string($db, $_POST['pieces']);
+        $co_p = mysqli_real_escape_string($db, $_POST['Cost_per_unit']);
+    
+        $po_d = date("Y-m-d", strtotime($podate));
+    
+        //insert query
+        $pp = mysqli_query($db, "insert into label_request_raised (exp_code, imp_code, sector, varities, label_type, po_number, podate, dpci, subcontractor, design_quality, rolls, pieces, cost_per_unit) values ('$exp_code', '$imp_code', '$sector', '$varity', '$l_t', '$po_number', '$po_d', '$dpci', '$sub', '$d_p', '$roll', '$piece', '$co_p')");
+        if(!$pp){
+            //echo "<script>alert('Something gone wrong .');window.location.href='./';</script";
+            echo $exp_code, $imp_code, $po_number;
+        }
+        else{
+            echo "<script>alert('Label Request Raised Successfully.');window.location.href='./';</script>";
+        }
+    }
+
 ?>

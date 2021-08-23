@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2021 at 01:26 PM
+-- Generation Time: Jul 08, 2021 at 10:51 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `gwi`
 --
+CREATE DATABASE IF NOT EXISTS `gwi` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `gwi`;
 
 -- --------------------------------------------------------
 
@@ -33,6 +35,16 @@ CREATE TABLE `currency` (
   `del_flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `currency`
+--
+
+INSERT INTO `currency` (`id`, `name`, `del_flg`) VALUES
+(1, 'USD', 'N'),
+(2, 'INR', 'N'),
+(3, 'EURO', 'N'),
+(4, 'GBP', 'N');
+
 -- --------------------------------------------------------
 
 --
@@ -45,10 +57,18 @@ CREATE TABLE `exporter_sub_info` (
   `address` varchar(500) NOT NULL,
   `country` varchar(100) NOT NULL,
   `registration_date` date NOT NULL,
-  `delicensed_date` date DEFAULT NULL,
-  `re_registration_date` date DEFAULT NULL,
+  `source_country` varchar(20) NOT NULL,
+  `delicensed_date` date NOT NULL,
+  `re_registration_date` date NOT NULL,
   `flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `exporter_sub_info`
+--
+
+INSERT INTO `exporter_sub_info` (`id`, `exporter_code`, `address`, `country`, `registration_date`, `source_country`, `delicensed_date`, `re_registration_date`, `flg`) VALUES
+(1, 'exp001', 'Vishnupuri Colony, Nawabganj, Kanpur, Uttar Pradesh', 'India', '2021-07-07', 'India', '2021-07-07', '2021-07-07', 'N');
 
 -- --------------------------------------------------------
 
@@ -65,10 +85,16 @@ CREATE TABLE `expoter` (
   `email` varchar(100) NOT NULL,
   `contact` varchar(50) NOT NULL,
   `website` varchar(100) NOT NULL,
-  `hash` varchar(100) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 0,
   `flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `expoter`
+--
+
+INSERT INTO `expoter` (`exporter_code`, `exporter_name`, `gstin`, `license_name`, `license_number`, `email`, `contact`, `website`, `status`, `flg`) VALUES
+('exp001', 'swapanil', 'GSTIN45612358741', 'Xtreme Digi Tech', 'UP7845696123', 'swapanil.s@xtremedigitech.com', '+918353912099', 'https://xtremedigitech.com/', 0, 'N');
 
 -- --------------------------------------------------------
 
@@ -85,10 +111,16 @@ CREATE TABLE `importer` (
   `email` varchar(100) NOT NULL,
   `contact` varchar(100) NOT NULL,
   `website` varchar(100) NOT NULL,
-  `hash` varchar(100) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 0,
   `flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `importer`
+--
+
+INSERT INTO `importer` (`importer_code`, `importer_name`, `gstin`, `license_name`, `license_number`, `email`, `contact`, `website`, `status`, `flg`) VALUES
+('lock12345', 'Swapanil Srivastava', 'GSTIN8903654792', 'UP', 'UP7890902354', 'swapanil.s@xtremedigitech.com', '+918353912099', 'swapanil.com', 0, 'N');
 
 -- --------------------------------------------------------
 
@@ -102,10 +134,18 @@ CREATE TABLE `importer_sub_info` (
   `address` varchar(500) NOT NULL,
   `country` varchar(100) NOT NULL,
   `registration_date` varchar(20) NOT NULL,
-  `delicensed_date` varchar(20) DEFAULT NULL,
-  `re_registration_date` varchar(20) DEFAULT NULL,
+  `source_country` varchar(20) NOT NULL,
+  `delicensed_date` varchar(20) NOT NULL,
+  `re_registration_date` varchar(20) NOT NULL,
   `flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `importer_sub_info`
+--
+
+INSERT INTO `importer_sub_info` (`id`, `importer_code`, `address`, `country`, `registration_date`, `source_country`, `delicensed_date`, `re_registration_date`, `flg`) VALUES
+(1, 'lock12345', 'Vishnupuri Colony, Nawabganj, Kanpur, Uttar Pradesh', 'India', '2021-07-07', 'India', '2021-07-15', '2021-07-30', 'N');
 
 -- --------------------------------------------------------
 
@@ -120,6 +160,13 @@ CREATE TABLE `intregration` (
   `del_flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `intregration`
+--
+
+INSERT INTO `intregration` (`id`, `curr_api_link`, `curr_api_keys`, `del_flg`) VALUES
+(1, 'https://free.currconv.com/api/v7/convert?q=USD_', '4eaa6b7ea73578b22e53', 'N');
+
 -- --------------------------------------------------------
 
 --
@@ -132,18 +179,16 @@ CREATE TABLE `label_type` (
   `del_flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `link_exp_to_imp`
+-- Dumping data for table `label_type`
 --
 
-CREATE TABLE `link_exp_to_imp` (
-  `id` int(11) NOT NULL,
-  `exp_code` varchar(100) NOT NULL,
-  `imp_code` varchar(100) NOT NULL,
-  `flg` char(1) NOT NULL DEFAULT 'N'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `label_type` (`id`, `type_name`, `del_flg`) VALUES
+(1, 'M Series', 'N'),
+(2, 'TD Series', 'N'),
+(3, 'RH Series', 'N'),
+(4, 'BS Series', 'N'),
+(5, 'HT Series', 'N');
 
 -- --------------------------------------------------------
 
@@ -162,7 +207,6 @@ CREATE TABLE `requested_label` (
   `euro_price` varchar(10) NOT NULL,
   `gbp_price` varchar(10) NOT NULL,
   `request_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `status` int(1) NOT NULL DEFAULT 0,
   `del_flg` char(1) NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -240,14 +284,6 @@ ALTER TABLE `label_type`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `link_exp_to_imp`
---
-ALTER TABLE `link_exp_to_imp`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `exp_code` (`exp_code`),
-  ADD KEY `imp_code` (`imp_code`);
-
---
 -- Indexes for table `requested_label`
 --
 ALTER TABLE `requested_label`
@@ -277,37 +313,31 @@ ALTER TABLE `varities`
 -- AUTO_INCREMENT for table `currency`
 --
 ALTER TABLE `currency`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `exporter_sub_info`
 --
 ALTER TABLE `exporter_sub_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `importer_sub_info`
 --
 ALTER TABLE `importer_sub_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `intregration`
 --
 ALTER TABLE `intregration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `label_type`
 --
 ALTER TABLE `label_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `link_exp_to_imp`
---
-ALTER TABLE `link_exp_to_imp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `requested_label`
@@ -342,13 +372,6 @@ ALTER TABLE `exporter_sub_info`
 --
 ALTER TABLE `importer_sub_info`
   ADD CONSTRAINT `importer_sub_info_ibfk_1` FOREIGN KEY (`importer_code`) REFERENCES `importer` (`importer_code`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `link_exp_to_imp`
---
-ALTER TABLE `link_exp_to_imp`
-  ADD CONSTRAINT `link_exp_to_imp_ibfk_1` FOREIGN KEY (`exp_code`) REFERENCES `expoter` (`exporter_code`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `link_exp_to_imp_ibfk_2` FOREIGN KEY (`imp_code`) REFERENCES `importer` (`importer_code`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `requested_label`
